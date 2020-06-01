@@ -1,10 +1,12 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import Constants from 'expo-constants';
+import List from './screens/admin/customer/list';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <List />
     </View>
   );
 }
@@ -12,8 +14,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+    backgroundColor: '#f7e8ba',
+    marginTop: Constants.statusBarHeight  // Expo : Top margin overlap with top screen ( Battery Status, Wifi, etc)
+  }
 });
